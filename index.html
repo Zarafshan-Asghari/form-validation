@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>form</title>
+  </head>
+  <body class="tracking-widest font-sans bg-zinc-900 p-4">
+    <!-- form global container -->
+    <div class="flex items-center justify-center h-screen">
+      <!-- main container  -->
+      <div
+        class="flex flex-col space-y-4 p-6 rounded-lg bg-white w-[380px] md:w-[480px] max-w-4xl shadow-lg"
+      >
+        <!-- form heading -->
+        <h3 class="text-3xl text-center capitalize">let's sign up</h3>
+        <form id="form" class="flex flex-col space-y-4">
+          <!-- name -->
+          <label for="name" class="sr-only">full name</label>
+          <input
+            type="text"
+            required
+            minlength="3"
+            maxlength="50"
+            class="p-2 rounded-md border-2 invalid:border-rose-700 transition duration-300 valid:border-emerald-600 outline-none placeholder:text-lg placeholder:capitalize placeholder:font-thin"
+            placeholder="full name"
+            name="name"
+          />
+          <!-- phone number -->
+
+          <label for="phone number" class="sr-only">phone number</label>
+          <input
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            type="tel"
+            class="p-2 rounded-md border-2 invalid:border-rose-700 transition duration-300 valid:border-emerald-600 outline-none placeholder:text-lg placeholder:capitalize placeholder:font-thin"
+            placeholder="234-347-6782"
+            name="phone"
+            id="phone"
+          />
+          <!-- email adress -->
+
+          <label for="email address" class="sr-only">email address</label>
+          <input
+            required
+            type="email"
+            id="email"
+            class="p-2 rounded-md border-2 invalid:border-rose-700 transition duration-300 valid:border-emerald-600 outline-none placeholder:text-lg placeholder:font-thin"
+            placeholder="yourEmail@gmail.com"
+            name="email"
+          />
+
+          <!-- url  -->
+
+          <label for="websit url" class="sr-only">websit url</label>
+          <input
+            required
+            type="url"
+            id="url"
+            class="p-2 rounded-md border-2 invalid:border-rose-700 transition duration-300 valid:border-emerald-600 outline-none placeholder:text-lg placeholder:capitalize placeholder:font-thin"
+            placeholder="https://yourWebsite.com"
+            name="url"
+          />
+
+          <!-- password -->
+
+          <label for="password" class="sr-only">password</label>
+          <input
+            id="password"
+            required
+            type="password"
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            class="p-2 rounded-md border-2 valid:border-emerald-600 transition duration-300 invalid:border-rose-700 outline-none placeholder:text-lg placeholder:capitalize placeholder:font-thin"
+            placeholder="creat a password (min 8 characters)"
+            title="your password should containes 1 uppercase,1 lowercase ,1 number"
+            name="password"
+          />
+          <!--confirm -->
+
+          <label for="confirm password" class="sr-only">confirm password</label>
+          <input
+            id="confirmPassword"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+            type="password"
+            class="p-2 rounded-md border-2 valid:border-emerald-600 transition duration-300 invalid:border-rose-700 outline-none placeholder:text-lg placeholder:capitalize placeholder:font-thin"
+            placeholder="confirm your password"
+          />
+
+          <!-- Button  -->
+          <button
+            class="bg-zinc-800 hover:animate-pulse focus:outline-none tracking-widest text-white py-4 rounded-md capitalize mt-2"
+          >
+            register
+          </button>
+        </form>
+        <!-- Message -->
+        <div class="message-container">
+          <p
+            id="Message"
+            class="text-center text-xl capitalize text-zinc-800 border-2 border-zinc-800 rounded-md p-2"
+          >
+            Message !
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
